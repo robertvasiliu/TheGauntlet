@@ -1,2 +1,3 @@
-2025/12/01-14:25:32.433 6b60 Creating DB C:\Users\rober\TheGauntlet\TheGauntlet\Saved\webcache_6613\Default\Local Storage\leveldb since it was missing.
-2025/12/01-14:25:32.469 6b60 Reusing MANIFEST C:\Users\rober\TheGauntlet\TheGauntlet\Saved\webcache_6613\Default\Local Storage\leveldb/MANIFEST-000001
+2025/12/05-00:01:44.275 498 Reusing MANIFEST C:\Users\rober\TheGauntlet\TheGauntlet\Saved\webcache_6613\Default\Local Storage\leveldb/MANIFEST-000001
+2025/12/05-00:01:44.291 498 Recovering log #3
+2025/12/05-00:01:44.298 498 Reusing old log C:\Users\rober\TheGauntlet\TheGauntlet\Saved\webcache_6613\Default\Local Storage\leveldb/000003.log 

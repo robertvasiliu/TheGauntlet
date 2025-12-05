@@ -1,0 +1,19 @@
+{
+  "targets": {
+    "TheGauntletEditor": {
+      "targetType": "Editor",
+      "targetPath": "C:\\Users\\rober\\TheGauntlet\\TheGauntlet\\Source\\TheGauntletEditor.Target.cs",
+      "projectPath": "C:\\Users\\rober\\TheGauntlet\\TheGauntlet\\TheGauntlet.uproject",
+      "configurations": [
+        "Development"
+      ],
+      "platforms": [
+        "Win64"
+      ],
+      "architectures": [],
+      "configurationsAndPlatforms": [
+        "Development-Win64"
+      ]
+    }
+  }
+}
