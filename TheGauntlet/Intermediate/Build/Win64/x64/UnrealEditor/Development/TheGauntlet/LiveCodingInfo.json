@@ -26,6 +26,7 @@
 		"Module.TheGauntlet.2.cpp.obj": [
 			"EnvQueryContext_Danger.gen.cpp.obj",
 			"EnvQueryContext_Player.gen.cpp.obj",
+			"GauntletGameMode.gen.cpp.obj",
 			"MyGameInstance.gen.cpp.obj",
 			"PlatformingCharacter.gen.cpp.obj",
 			"PlatformingGameMode.gen.cpp.obj",
@@ -48,17 +49,18 @@
 			"TheGauntletGameMode.gen.cpp.obj",
 			"TheGauntletPlayerController.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
+			"GauntletGameMode.cpp.obj",
 			"MyClass.cpp.obj",
 			"MyGameInstance.cpp.obj",
 			"TheGauntlet.cpp.obj",
-			"TheGauntletCharacter.cpp.obj",
+			"TheGauntletCharacter.cpp.obj"
+		],
+		"Module.TheGauntlet.3.cpp.obj": [
 			"TheGauntletGameMode.cpp.obj",
 			"TheGauntletPlayerController.cpp.obj",
 			"CombatAIController.cpp.obj",
 			"CombatEnemy.cpp.obj",
-			"CombatEnemySpawner.cpp.obj"
-		],
-		"Module.TheGauntlet.3.cpp.obj": [
+			"CombatEnemySpawner.cpp.obj",
 			"CombatStateTreeUtility.cpp.obj",
 			"EnvQueryContext_Danger.cpp.obj",
 			"EnvQueryContext_Player.cpp.obj",

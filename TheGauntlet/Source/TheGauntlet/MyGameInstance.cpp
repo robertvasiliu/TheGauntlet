@@ -14,5 +14,5 @@ void UMyGameInstance::QuitGame()
 }
 void UMyGameInstance::LoadMainMenu()
 {
-	UGameplayStatics::OpenLevel(GetWorld(), FName("MainMenu"));
+	UGameplayStatics::OpenLevel(this, FName("MainMenu"));
 }

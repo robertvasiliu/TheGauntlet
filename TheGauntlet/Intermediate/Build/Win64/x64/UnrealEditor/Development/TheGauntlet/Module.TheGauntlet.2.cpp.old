@@ -23,6 +23,7 @@
 #include "C:/Users/rober/TheGauntlet/TheGauntlet/Intermediate/Build/Win64/UnrealEditor/Inc/TheGauntlet/UHT/TheGauntletGameMode.gen.cpp"
 #include "C:/Users/rober/TheGauntlet/TheGauntlet/Intermediate/Build/Win64/UnrealEditor/Inc/TheGauntlet/UHT/TheGauntletPlayerController.gen.cpp"
 #include "C:/Users/rober/TheGauntlet/TheGauntlet/Intermediate/Build/Win64/x64/UnrealEditor/Development/TheGauntlet/PerModuleInline.gen.cpp"
+#include "C:/Users/rober/TheGauntlet/TheGauntlet/Source/TheGauntlet/GauntletGameMode.cpp"
 #include "C:/Users/rober/TheGauntlet/TheGauntlet/Source/TheGauntlet/MyClass.cpp"
 #include "C:/Users/rober/TheGauntlet/TheGauntlet/Source/TheGauntlet/MyGameInstance.cpp"
 #include "C:/Users/rober/TheGauntlet/TheGauntlet/Source/TheGauntlet/TheGauntlet.cpp"
@@ -32,4 +33,3 @@
 #include "C:/Users/rober/TheGauntlet/TheGauntlet/Source/TheGauntlet/Variant_Combat/AI/CombatAIController.cpp"
 #include "C:/Users/rober/TheGauntlet/TheGauntlet/Source/TheGauntlet/Variant_Combat/AI/CombatEnemy.cpp"
 #include "C:/Users/rober/TheGauntlet/TheGauntlet/Source/TheGauntlet/Variant_Combat/AI/CombatEnemySpawner.cpp"
-#include "C:/Users/rober/TheGauntlet/TheGauntlet/Source/TheGauntlet/Variant_Combat/AI/CombatStateTreeUtility.cpp"

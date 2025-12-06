@@ -32,6 +32,18 @@
     <Filter Include="Source\TheGauntlet">
       <UniqueIdentifier>{73C1CE49-F1FF-36E0-9926-0299A8926236}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\TheGauntlet\GauntletGameMode.cpp">
+      <Filter>Source\TheGauntlet</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TheGauntlet\GauntletGameMode.h">
+      <Filter>Source\TheGauntlet</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TheGauntlet\Interactables.cpp">
+      <Filter>Source\TheGauntlet</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TheGauntlet\Interactables.h">
+      <Filter>Source\TheGauntlet</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TheGauntlet\MyClass.cpp">
       <Filter>Source\TheGauntlet</Filter>
     </ClCompile>
