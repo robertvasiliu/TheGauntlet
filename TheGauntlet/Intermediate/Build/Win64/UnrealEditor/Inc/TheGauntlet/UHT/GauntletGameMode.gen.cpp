@@ -52,6 +52,57 @@ void FOnLevelCompleted_DelegateWrapper(const FMulticastScriptDelegate& OnLevelCo
 }
 // ********** End Delegate FOnLevelCompleted *******************************************************
 
+// ********** Begin Class AGauntletGameMode Function CloseGate *************************************
+struct Z_Construct_UFunction_AGauntletGameMode_CloseGate_Statics
+{
+	struct GauntletGameMode_eventCloseGate_Parms
+	{
+		AActor* GateActor;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "GauntletGameMode.h" },
+	};
+#endif // WITH_METADATA
+
+// ********** Begin Function CloseGate constinit property declarations *****************************
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_GateActor;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function CloseGate constinit property declarations *******************************
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+
+// ********** Begin Function CloseGate Property Definitions ****************************************
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AGauntletGameMode_CloseGate_Statics::NewProp_GateActor = { "GateActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(GauntletGameMode_eventCloseGate_Parms, GateActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AGauntletGameMode_CloseGate_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AGauntletGameMode_CloseGate_Statics::NewProp_GateActor,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AGauntletGameMode_CloseGate_Statics::PropPointers) < 2048);
+// ********** End Function CloseGate Property Definitions ******************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AGauntletGameMode_CloseGate_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AGauntletGameMode, nullptr, "CloseGate", 	Z_Construct_UFunction_AGauntletGameMode_CloseGate_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_AGauntletGameMode_CloseGate_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_AGauntletGameMode_CloseGate_Statics::GauntletGameMode_eventCloseGate_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AGauntletGameMode_CloseGate_Statics::Function_MetaDataParams), Z_Construct_UFunction_AGauntletGameMode_CloseGate_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_AGauntletGameMode_CloseGate_Statics::GauntletGameMode_eventCloseGate_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_AGauntletGameMode_CloseGate()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AGauntletGameMode_CloseGate_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AGauntletGameMode::execCloseGate)
+{
+	P_GET_OBJECT(AActor,Z_Param_GateActor);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->CloseGate(Z_Param_GateActor);
+	P_NATIVE_END;
+}
+// ********** End Class AGauntletGameMode Function CloseGate ***************************************
+
 // ********** Begin Class AGauntletGameMode Function HandleLevelCompleted **************************
 struct Z_Construct_UFunction_AGauntletGameMode_HandleLevelCompleted_Statics
 {
@@ -138,6 +189,63 @@ DEFINE_FUNCTION(AGauntletGameMode::execHandlePlayerDeath)
 }
 // ********** End Class AGauntletGameMode Function HandlePlayerDeath *******************************
 
+// ********** Begin Class AGauntletGameMode Function OpenGateTimed *********************************
+struct Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed_Statics
+{
+	struct GauntletGameMode_eventOpenGateTimed_Parms
+	{
+		AActor* GateActor;
+		float OpenTime;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Gate" },
+		{ "ModuleRelativePath", "GauntletGameMode.h" },
+	};
+#endif // WITH_METADATA
+
+// ********** Begin Function OpenGateTimed constinit property declarations *************************
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_GateActor;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_OpenTime;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+// ********** End Function OpenGateTimed constinit property declarations ***************************
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+
+// ********** Begin Function OpenGateTimed Property Definitions ************************************
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed_Statics::NewProp_GateActor = { "GateActor", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(GauntletGameMode_eventOpenGateTimed_Parms, GateActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed_Statics::NewProp_OpenTime = { "OpenTime", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(GauntletGameMode_eventOpenGateTimed_Parms, OpenTime), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed_Statics::NewProp_GateActor,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed_Statics::NewProp_OpenTime,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed_Statics::PropPointers) < 2048);
+// ********** End Function OpenGateTimed Property Definitions **************************************
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AGauntletGameMode, nullptr, "OpenGateTimed", 	Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed_Statics::PropPointers, 
+	UE_ARRAY_COUNT(Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed_Statics::PropPointers), 
+sizeof(Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed_Statics::GauntletGameMode_eventOpenGateTimed_Parms),
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed_Statics::Function_MetaDataParams), Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed_Statics::GauntletGameMode_eventOpenGateTimed_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AGauntletGameMode::execOpenGateTimed)
+{
+	P_GET_OBJECT(AActor,Z_Param_GateActor);
+	P_GET_PROPERTY(FFloatProperty,Z_Param_OpenTime);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OpenGateTimed(Z_Param_GateActor,Z_Param_OpenTime);
+	P_NATIVE_END;
+}
+// ********** End Class AGauntletGameMode Function OpenGateTimed ***********************************
+
 // ********** Begin Class AGauntletGameMode ********************************************************
 FClassRegistrationInfo Z_Registration_Info_UClass_AGauntletGameMode;
 UClass* AGauntletGameMode::GetPrivateStaticClass()
@@ -182,13 +290,17 @@ struct Z_Construct_UClass_AGauntletGameMode_Statics
 // ********** Begin Class AGauntletGameMode constinit property declarations ************************
 // ********** End Class AGauntletGameMode constinit property declarations **************************
 	static constexpr UE::CodeGen::FClassNativeFunction Funcs[] = {
+		{ .NameUTF8 = UTF8TEXT("CloseGate"), .Pointer = &AGauntletGameMode::execCloseGate },
 		{ .NameUTF8 = UTF8TEXT("HandleLevelCompleted"), .Pointer = &AGauntletGameMode::execHandleLevelCompleted },
 		{ .NameUTF8 = UTF8TEXT("HandlePlayerDeath"), .Pointer = &AGauntletGameMode::execHandlePlayerDeath },
+		{ .NameUTF8 = UTF8TEXT("OpenGateTimed"), .Pointer = &AGauntletGameMode::execOpenGateTimed },
 	};
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_AGauntletGameMode_CloseGate, "CloseGate" }, // 492703082
 		{ &Z_Construct_UFunction_AGauntletGameMode_HandleLevelCompleted, "HandleLevelCompleted" }, // 621240607
 		{ &Z_Construct_UFunction_AGauntletGameMode_HandlePlayerDeath, "HandlePlayerDeath" }, // 1491690236
+		{ &Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed, "OpenGateTimed" }, // 3547817767
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -237,10 +349,10 @@ AGauntletGameMode::~AGauntletGameMode() {}
 struct Z_CompiledInDeferFile_FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h__Script_TheGauntlet_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AGauntletGameMode, AGauntletGameMode::StaticClass, TEXT("AGauntletGameMode"), &Z_Registration_Info_UClass_AGauntletGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGauntletGameMode), 1352752765U) },
+		{ Z_Construct_UClass_AGauntletGameMode, AGauntletGameMode::StaticClass, TEXT("AGauntletGameMode"), &Z_Registration_Info_UClass_AGauntletGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGauntletGameMode), 26074815U) },
 	};
 }; // Z_CompiledInDeferFile_FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h__Script_TheGauntlet_Statics 
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h__Script_TheGauntlet_2779345651{
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h__Script_TheGauntlet_3125478780{
 	TEXT("/Script/TheGauntlet"),
 	Z_CompiledInDeferFile_FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h__Script_TheGauntlet_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h__Script_TheGauntlet_Statics::ClassInfo),
 	nullptr, 0,

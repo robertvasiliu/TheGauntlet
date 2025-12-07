@@ -22,4 +22,11 @@ public:
 
     virtual void BeginPlay() override;
     virtual void Tick(float DeltaSeconds) override;
+
+    FTimerHandle GateTimerHandle;
+    UFUNCTION(BlueprintCallable, Category = "Gate")
+    void OpenGateTimed(class AActor* GateActor, float OpenTime);
+
+    UFUNCTION()
+    void CloseGate(class AActor* GateActor);
 };

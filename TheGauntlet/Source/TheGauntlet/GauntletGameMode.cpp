@@ -52,3 +52,46 @@ void AGauntletGameMode::HandlePlayerDeath()
         }
     }
 }
+
+void AGauntletGameMode::OpenGateTimed(AActor* GateActor, float OpenTime)
+{
+    if (!GateActor) return;
+
+    if (GEngine)
+    {
+        GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Yellow, TEXT("OpenGateTimed"));
+    }
+
+    GateActor->SetActorEnableCollision(false);
+
+    TArray<UStaticMeshComponent*> Meshes;
+    GateActor->GetComponents<UStaticMeshComponent>(Meshes);
+    for (auto* Mesh : Meshes)
+    {
+        Mesh->SetVisibility(false);
+    }
+
+    FTimerDelegate TimerDel;
+    TimerDel.BindUFunction(this, FName("CloseGate"), GateActor);
+
+    GetWorldTimerManager().SetTimer(
+        GateTimerHandle,
+        TimerDel,
+        OpenTime,
+        false
+    );
+}
+
+void AGauntletGameMode::CloseGate(AActor* GateActor)
+{
+    if (!GateActor) return;
+
+    GateActor->SetActorEnableCollision(true);
+
+    TArray<UStaticMeshComponent*> Meshes;
+    GateActor->GetComponents<UStaticMeshComponent>(Meshes);
+    for (auto* Mesh : Meshes)
+    {
+        Mesh->SetVisibility(true);
+    }
+}
