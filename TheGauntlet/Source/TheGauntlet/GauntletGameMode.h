@@ -29,4 +29,13 @@ public:
 
     UFUNCTION()
     void CloseGate(class AActor* GateActor);
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gate")
+        TArray<AActor*> PuzzleLevers;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Gate")
+    AActor* PuzzleGate;
+
+    UFUNCTION(BlueprintCallable, Category = "Gate")
+    void RegisterLeverState(AActor* Lever, bool bIsOn);
 };

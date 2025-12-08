@@ -26,6 +26,7 @@ THEGAUNTLET_API void FOnLevelCompleted_DelegateWrapper(const FMulticastScriptDel
 
 // ********** Begin Class AGauntletGameMode ********************************************************
 #define FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execRegisterLeverState); \
 	DECLARE_FUNCTION(execCloseGate); \
 	DECLARE_FUNCTION(execOpenGateTimed); \
 	DECLARE_FUNCTION(execHandlePlayerDeath); \

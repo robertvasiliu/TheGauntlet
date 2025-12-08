@@ -17,6 +17,11 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class ATheGauntletPlayerController *********************************************
+#define FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_TheGauntletPlayerController_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execShowGameMode); \
+	DECLARE_FUNCTION(execShowMenuMode);
+
+
 struct Z_Construct_UClass_ATheGauntletPlayerController_Statics;
 THEGAUNTLET_API UClass* Z_Construct_UClass_ATheGauntletPlayerController_NoRegister();
 
@@ -27,7 +32,7 @@ private: \
 	static UClass* GetPrivateStaticClass(); \
 	friend THEGAUNTLET_API UClass* ::Z_Construct_UClass_ATheGauntletPlayerController_NoRegister(); \
 public: \
-	DECLARE_CLASS2(ATheGauntletPlayerController, APlayerController, COMPILED_IN_FLAGS(CLASS_Abstract | CLASS_Config), CASTCLASS_None, TEXT("/Script/TheGauntlet"), Z_Construct_UClass_ATheGauntletPlayerController_NoRegister) \
+	DECLARE_CLASS2(ATheGauntletPlayerController, APlayerController, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/TheGauntlet"), Z_Construct_UClass_ATheGauntletPlayerController_NoRegister) \
 	DECLARE_SERIALIZER(ATheGauntletPlayerController)
 
 
@@ -39,7 +44,7 @@ public: \
 	ATheGauntletPlayerController(const ATheGauntletPlayerController&) = delete; \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ATheGauntletPlayerController); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATheGauntletPlayerController); \
-	DEFINE_ABSTRACT_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATheGauntletPlayerController) \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATheGauntletPlayerController) \
 	NO_API virtual ~ATheGauntletPlayerController();
 
 
@@ -47,6 +52,7 @@ public: \
 #define FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_TheGauntletPlayerController_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_TheGauntletPlayerController_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_TheGauntletPlayerController_h_19_INCLASS_NO_PURE_DECLS \
 	FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_TheGauntletPlayerController_h_19_ENHANCED_CONSTRUCTORS \
 private: \

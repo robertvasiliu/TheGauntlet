@@ -95,3 +95,14 @@ void AGauntletGameMode::CloseGate(AActor* GateActor)
         Mesh->SetVisibility(true);
     }
 }
+void AGauntletGameMode::RegisterLeverState(AActor* Lever, bool bIsOn)
+{
+    if (!Lever || !PuzzleGate) return;
+    bool bAllOn = true;
+
+    for (AActor* L : PuzzleLevers)
+    {
+        if (!L) continue;
+
+    }
+}
