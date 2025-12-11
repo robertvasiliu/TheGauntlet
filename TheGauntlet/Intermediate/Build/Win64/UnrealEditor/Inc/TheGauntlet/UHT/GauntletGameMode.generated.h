@@ -17,26 +17,34 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class AActor;
 
-// ********** Begin Delegate FOnLevelCompleted *****************************************************
+// ********** Begin Delegate FOnPlayerDied *********************************************************
 #define FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_7_DELEGATE \
-THEGAUNTLET_API void FOnLevelCompleted_DelegateWrapper(const FMulticastScriptDelegate& OnLevelCompleted);
+THEGAUNTLET_API void FOnPlayerDied_DelegateWrapper(const FMulticastScriptDelegate& OnPlayerDied);
 
 
-// ********** End Delegate FOnLevelCompleted *******************************************************
+// ********** End Delegate FOnPlayerDied ***********************************************************
+
+// ********** Begin Delegate FOnLevelCompletedSimple ***********************************************
+#define FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_9_DELEGATE \
+THEGAUNTLET_API void FOnLevelCompletedSimple_DelegateWrapper(const FMulticastScriptDelegate& OnLevelCompletedSimple);
+
+
+// ********** End Delegate FOnLevelCompletedSimple *************************************************
 
 // ********** Begin Class AGauntletGameMode ********************************************************
-#define FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execRegisterLeverState); \
 	DECLARE_FUNCTION(execCloseGate); \
 	DECLARE_FUNCTION(execOpenGateTimed); \
 	DECLARE_FUNCTION(execHandlePlayerDeath); \
-	DECLARE_FUNCTION(execHandleLevelCompleted);
+	DECLARE_FUNCTION(execHandleLevelCompleted); \
+	DECLARE_FUNCTION(execReturnToMainMenu);
 
 
 struct Z_Construct_UClass_AGauntletGameMode_Statics;
 THEGAUNTLET_API UClass* Z_Construct_UClass_AGauntletGameMode_NoRegister();
 
-#define FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGauntletGameMode(); \
 	friend struct ::Z_Construct_UClass_AGauntletGameMode_Statics; \
@@ -47,7 +55,7 @@ public: \
 	DECLARE_SERIALIZER(AGauntletGameMode)
 
 
-#define FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_13_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AGauntletGameMode(AGauntletGameMode&&) = delete; \
 	AGauntletGameMode(const AGauntletGameMode&) = delete; \
@@ -57,13 +65,13 @@ public: \
 	NO_API virtual ~AGauntletGameMode();
 
 
-#define FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_9_PROLOG
-#define FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_12_GENERATED_BODY \
+#define FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_10_PROLOG
+#define FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_12_ENHANCED_CONSTRUCTORS \
+	FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_13_INCLASS_NO_PURE_DECLS \
+	FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -21,5 +21,3 @@
 #include "C:/Users/rober/TheGauntlet/TheGauntlet/Intermediate/Build/Win64/UnrealEditor/Inc/TheGauntlet/UHT/SideScrollingUI.gen.cpp"
 #include "C:/Users/rober/TheGauntlet/TheGauntlet/Intermediate/Build/Win64/UnrealEditor/Inc/TheGauntlet/UHT/TheGauntlet.init.gen.cpp"
 #include "C:/Users/rober/TheGauntlet/TheGauntlet/Intermediate/Build/Win64/UnrealEditor/Inc/TheGauntlet/UHT/TheGauntletCharacter.gen.cpp"
-#include "C:/Users/rober/TheGauntlet/TheGauntlet/Intermediate/Build/Win64/UnrealEditor/Inc/TheGauntlet/UHT/TheGauntletGameMode.gen.cpp"
-#include "C:/Users/rober/TheGauntlet/TheGauntlet/Intermediate/Build/Win64/UnrealEditor/Inc/TheGauntlet/UHT/TheGauntletPlayerController.gen.cpp"

@@ -18,10 +18,14 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class ATheGauntletCharacter ****************************************************
 #define FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_TheGauntletCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execSetHasKey); \
+	DECLARE_FUNCTION(execAddStones); \
+	DECLARE_FUNCTION(execApplyDamage); \
 	DECLARE_FUNCTION(execDoJumpEnd); \
 	DECLARE_FUNCTION(execDoJumpStart); \
 	DECLARE_FUNCTION(execDoLook); \
-	DECLARE_FUNCTION(execDoMove);
+	DECLARE_FUNCTION(execDoMove); \
+	DECLARE_FUNCTION(execApplyFallDamage);
 
 
 struct Z_Construct_UClass_ATheGauntletCharacter_Statics;
@@ -34,7 +38,7 @@ private: \
 	static UClass* GetPrivateStaticClass(); \
 	friend THEGAUNTLET_API UClass* ::Z_Construct_UClass_ATheGauntletCharacter_NoRegister(); \
 public: \
-	DECLARE_CLASS2(ATheGauntletCharacter, ACharacter, COMPILED_IN_FLAGS(CLASS_Abstract | CLASS_Config), CASTCLASS_None, TEXT("/Script/TheGauntlet"), Z_Construct_UClass_ATheGauntletCharacter_NoRegister) \
+	DECLARE_CLASS2(ATheGauntletCharacter, ACharacter, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/TheGauntlet"), Z_Construct_UClass_ATheGauntletCharacter_NoRegister) \
 	DECLARE_SERIALIZER(ATheGauntletCharacter)
 
 
@@ -44,7 +48,7 @@ public: \
 	ATheGauntletCharacter(const ATheGauntletCharacter&) = delete; \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ATheGauntletCharacter); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATheGauntletCharacter); \
-	DEFINE_ABSTRACT_DEFAULT_CONSTRUCTOR_CALL(ATheGauntletCharacter) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ATheGauntletCharacter) \
 	NO_API virtual ~ATheGauntletCharacter();
 
 

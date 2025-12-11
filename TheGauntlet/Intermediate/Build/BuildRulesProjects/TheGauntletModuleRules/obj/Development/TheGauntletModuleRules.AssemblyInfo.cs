@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TheGauntletModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5102e3054956d9159997e8f316b10efd78f2489b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e03069a37a81edfc7fd6c92f0d1ca3fac3f0d55")]
 [assembly: System.Reflection.AssemblyProductAttribute("TheGauntletModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TheGauntletModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -16,41 +16,80 @@ ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_AGameModeBase();
 THEGAUNTLET_API UClass* Z_Construct_UClass_AGauntletGameMode();
 THEGAUNTLET_API UClass* Z_Construct_UClass_AGauntletGameMode_NoRegister();
-THEGAUNTLET_API UFunction* Z_Construct_UDelegateFunction_TheGauntlet_OnLevelCompleted__DelegateSignature();
+THEGAUNTLET_API UFunction* Z_Construct_UDelegateFunction_TheGauntlet_OnLevelCompletedSimple__DelegateSignature();
+THEGAUNTLET_API UFunction* Z_Construct_UDelegateFunction_TheGauntlet_OnPlayerDied__DelegateSignature();
 UPackage* Z_Construct_UPackage__Script_TheGauntlet();
 // ********** End Cross Module References **********************************************************
 
-// ********** Begin Delegate FOnLevelCompleted *****************************************************
-struct Z_Construct_UDelegateFunction_TheGauntlet_OnLevelCompleted__DelegateSignature_Statics
+// ********** Begin Delegate FOnPlayerDied *********************************************************
+struct Z_Construct_UDelegateFunction_TheGauntlet_OnPlayerDied__DelegateSignature_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\n" },
+#endif
 		{ "ModuleRelativePath", "GauntletGameMode.h" },
 	};
 #endif // WITH_METADATA
 
-// ********** Begin Delegate FOnLevelCompleted constinit property declarations *********************
-// ********** End Delegate FOnLevelCompleted constinit property declarations ***********************
+// ********** Begin Delegate FOnPlayerDied constinit property declarations *************************
+// ********** End Delegate FOnPlayerDied constinit property declarations ***************************
 	static const UECodeGen_Private::FDelegateFunctionParams FuncParams;
 };
-const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_TheGauntlet_OnLevelCompleted__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_TheGauntlet, nullptr, "OnLevelCompleted__DelegateSignature", 	nullptr, 
+const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_TheGauntlet_OnPlayerDied__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_TheGauntlet, nullptr, "OnPlayerDied__DelegateSignature", 	nullptr, 
 	0, 
 0,
-RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_TheGauntlet_OnLevelCompleted__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_TheGauntlet_OnLevelCompleted__DelegateSignature_Statics::Function_MetaDataParams)},  };
-UFunction* Z_Construct_UDelegateFunction_TheGauntlet_OnLevelCompleted__DelegateSignature()
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_TheGauntlet_OnPlayerDied__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_TheGauntlet_OnPlayerDied__DelegateSignature_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UDelegateFunction_TheGauntlet_OnPlayerDied__DelegateSignature()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUDelegateFunction(&ReturnFunction, Z_Construct_UDelegateFunction_TheGauntlet_OnLevelCompleted__DelegateSignature_Statics::FuncParams);
+		UECodeGen_Private::ConstructUDelegateFunction(&ReturnFunction, Z_Construct_UDelegateFunction_TheGauntlet_OnPlayerDied__DelegateSignature_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-void FOnLevelCompleted_DelegateWrapper(const FMulticastScriptDelegate& OnLevelCompleted)
+void FOnPlayerDied_DelegateWrapper(const FMulticastScriptDelegate& OnPlayerDied)
 {
-	OnLevelCompleted.ProcessMulticastDelegate<UObject>(NULL);
+	OnPlayerDied.ProcessMulticastDelegate<UObject>(NULL);
 }
-// ********** End Delegate FOnLevelCompleted *******************************************************
+// ********** End Delegate FOnPlayerDied ***********************************************************
+
+// ********** Begin Delegate FOnLevelCompletedSimple ***********************************************
+struct Z_Construct_UDelegateFunction_TheGauntlet_OnLevelCompletedSimple__DelegateSignature_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//\n" },
+#endif
+		{ "ModuleRelativePath", "GauntletGameMode.h" },
+	};
+#endif // WITH_METADATA
+
+// ********** Begin Delegate FOnLevelCompletedSimple constinit property declarations ***************
+// ********** End Delegate FOnLevelCompletedSimple constinit property declarations *****************
+	static const UECodeGen_Private::FDelegateFunctionParams FuncParams;
+};
+const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_TheGauntlet_OnLevelCompletedSimple__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_TheGauntlet, nullptr, "OnLevelCompletedSimple__DelegateSignature", 	nullptr, 
+	0, 
+0,
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_TheGauntlet_OnLevelCompletedSimple__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_TheGauntlet_OnLevelCompletedSimple__DelegateSignature_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UDelegateFunction_TheGauntlet_OnLevelCompletedSimple__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUDelegateFunction(&ReturnFunction, Z_Construct_UDelegateFunction_TheGauntlet_OnLevelCompletedSimple__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void FOnLevelCompletedSimple_DelegateWrapper(const FMulticastScriptDelegate& OnLevelCompletedSimple)
+{
+	OnLevelCompletedSimple.ProcessMulticastDelegate<UObject>(NULL);
+}
+// ********** End Delegate FOnLevelCompletedSimple *************************************************
 
 // ********** Begin Class AGauntletGameMode Function CloseGate *************************************
 struct Z_Construct_UFunction_AGauntletGameMode_CloseGate_Statics
@@ -249,45 +288,21 @@ DEFINE_FUNCTION(AGauntletGameMode::execOpenGateTimed)
 // ********** Begin Class AGauntletGameMode Function RegisterLeverState ****************************
 struct Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics
 {
-	struct GauntletGameMode_eventRegisterLeverState_Parms
-	{
-		AActor* Lever;
-		bool bIsOn;
-	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "Gate" },
+		{ "Category", "Puzzle" },
 		{ "ModuleRelativePath", "GauntletGameMode.h" },
 	};
 #endif // WITH_METADATA
 
 // ********** Begin Function RegisterLeverState constinit property declarations ********************
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_Lever;
-	static void NewProp_bIsOn_SetBit(void* Obj);
-	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsOn;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 // ********** End Function RegisterLeverState constinit property declarations **********************
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-
-// ********** Begin Function RegisterLeverState Property Definitions *******************************
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics::NewProp_Lever = { "Lever", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(GauntletGameMode_eventRegisterLeverState_Parms, Lever), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
-void Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics::NewProp_bIsOn_SetBit(void* Obj)
-{
-	((GauntletGameMode_eventRegisterLeverState_Parms*)Obj)->bIsOn = 1;
-}
-const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics::NewProp_bIsOn = { "bIsOn", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(GauntletGameMode_eventRegisterLeverState_Parms), &Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics::NewProp_bIsOn_SetBit, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics::NewProp_Lever,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics::NewProp_bIsOn,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics::PropPointers) < 2048);
-// ********** End Function RegisterLeverState Property Definitions *********************************
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AGauntletGameMode, nullptr, "RegisterLeverState", 	Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics::PropPointers, 
-	UE_ARRAY_COUNT(Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics::PropPointers), 
-sizeof(Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics::GauntletGameMode_eventRegisterLeverState_Parms),
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AGauntletGameMode, nullptr, "RegisterLeverState", 	nullptr, 
+	0, 
+0,
 RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics::Function_MetaDataParams), Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics::Function_MetaDataParams)},  };
-static_assert(sizeof(Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState_Statics::GauntletGameMode_eventRegisterLeverState_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState()
 {
 	static UFunction* ReturnFunction = nullptr;
@@ -299,14 +314,47 @@ UFunction* Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState()
 }
 DEFINE_FUNCTION(AGauntletGameMode::execRegisterLeverState)
 {
-	P_GET_OBJECT(AActor,Z_Param_Lever);
-	P_GET_UBOOL(Z_Param_bIsOn);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->RegisterLeverState(Z_Param_Lever,Z_Param_bIsOn);
+	P_THIS->RegisterLeverState();
 	P_NATIVE_END;
 }
 // ********** End Class AGauntletGameMode Function RegisterLeverState ******************************
+
+// ********** Begin Class AGauntletGameMode Function ReturnToMainMenu ******************************
+struct Z_Construct_UFunction_AGauntletGameMode_ReturnToMainMenu_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "GauntletGameMode.h" },
+	};
+#endif // WITH_METADATA
+
+// ********** Begin Function ReturnToMainMenu constinit property declarations **********************
+// ********** End Function ReturnToMainMenu constinit property declarations ************************
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AGauntletGameMode_ReturnToMainMenu_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_AGauntletGameMode, nullptr, "ReturnToMainMenu", 	nullptr, 
+	0, 
+0,
+RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AGauntletGameMode_ReturnToMainMenu_Statics::Function_MetaDataParams), Z_Construct_UFunction_AGauntletGameMode_ReturnToMainMenu_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_AGauntletGameMode_ReturnToMainMenu()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AGauntletGameMode_ReturnToMainMenu_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AGauntletGameMode::execReturnToMainMenu)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ReturnToMainMenu();
+	P_NATIVE_END;
+}
+// ********** End Class AGauntletGameMode Function ReturnToMainMenu ********************************
 
 // ********** Begin Class AGauntletGameMode ********************************************************
 FClassRegistrationInfo Z_Registration_Info_UClass_AGauntletGameMode;
@@ -348,11 +396,19 @@ struct Z_Construct_UClass_AGauntletGameMode_Statics
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PuzzleLevers_MetaData[] = {
-		{ "Category", "Gate" },
+		{ "Category", "Puzzle" },
 		{ "ModuleRelativePath", "GauntletGameMode.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PuzzleGate_MetaData[] = {
-		{ "Category", "Gate" },
+		{ "Category", "Puzzle" },
+		{ "ModuleRelativePath", "GauntletGameMode.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnPlayerDied_MetaData[] = {
+		{ "Category", "Events" },
+		{ "ModuleRelativePath", "GauntletGameMode.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnLevelCompleted_MetaData[] = {
+		{ "Category", "Events" },
 		{ "ModuleRelativePath", "GauntletGameMode.h" },
 	};
 #endif // WITH_METADATA
@@ -361,6 +417,8 @@ struct Z_Construct_UClass_AGauntletGameMode_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PuzzleLevers_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_PuzzleLevers;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PuzzleGate;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnPlayerDied;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnLevelCompleted;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 // ********** End Class AGauntletGameMode constinit property declarations **************************
 	static constexpr UE::CodeGen::FClassNativeFunction Funcs[] = {
@@ -369,6 +427,7 @@ struct Z_Construct_UClass_AGauntletGameMode_Statics
 		{ .NameUTF8 = UTF8TEXT("HandlePlayerDeath"), .Pointer = &AGauntletGameMode::execHandlePlayerDeath },
 		{ .NameUTF8 = UTF8TEXT("OpenGateTimed"), .Pointer = &AGauntletGameMode::execOpenGateTimed },
 		{ .NameUTF8 = UTF8TEXT("RegisterLeverState"), .Pointer = &AGauntletGameMode::execRegisterLeverState },
+		{ .NameUTF8 = UTF8TEXT("ReturnToMainMenu"), .Pointer = &AGauntletGameMode::execReturnToMainMenu },
 	};
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -376,7 +435,8 @@ struct Z_Construct_UClass_AGauntletGameMode_Statics
 		{ &Z_Construct_UFunction_AGauntletGameMode_HandleLevelCompleted, "HandleLevelCompleted" }, // 621240607
 		{ &Z_Construct_UFunction_AGauntletGameMode_HandlePlayerDeath, "HandlePlayerDeath" }, // 1491690236
 		{ &Z_Construct_UFunction_AGauntletGameMode_OpenGateTimed, "OpenGateTimed" }, // 3547817767
-		{ &Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState, "RegisterLeverState" }, // 2005344605
+		{ &Z_Construct_UFunction_AGauntletGameMode_RegisterLeverState, "RegisterLeverState" }, // 2363786009
+		{ &Z_Construct_UFunction_AGauntletGameMode_ReturnToMainMenu, "ReturnToMainMenu" }, // 3213886197
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -389,10 +449,14 @@ struct Z_Construct_UClass_AGauntletGameMode_Statics
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGauntletGameMode_Statics::NewProp_PuzzleLevers_Inner = { "PuzzleLevers", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AGauntletGameMode_Statics::NewProp_PuzzleLevers = { "PuzzleLevers", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGauntletGameMode, PuzzleLevers), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PuzzleLevers_MetaData), NewProp_PuzzleLevers_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGauntletGameMode_Statics::NewProp_PuzzleGate = { "PuzzleGate", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGauntletGameMode, PuzzleGate), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PuzzleGate_MetaData), NewProp_PuzzleGate_MetaData) };
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AGauntletGameMode_Statics::NewProp_OnPlayerDied = { "OnPlayerDied", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGauntletGameMode, OnPlayerDied), Z_Construct_UDelegateFunction_TheGauntlet_OnPlayerDied__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnPlayerDied_MetaData), NewProp_OnPlayerDied_MetaData) }; // 674935493
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_AGauntletGameMode_Statics::NewProp_OnLevelCompleted = { "OnLevelCompleted", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGauntletGameMode, OnLevelCompleted), Z_Construct_UDelegateFunction_TheGauntlet_OnLevelCompletedSimple__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnLevelCompleted_MetaData), NewProp_OnLevelCompleted_MetaData) }; // 2112683126
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGauntletGameMode_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGauntletGameMode_Statics::NewProp_PuzzleLevers_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGauntletGameMode_Statics::NewProp_PuzzleLevers,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGauntletGameMode_Statics::NewProp_PuzzleGate,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGauntletGameMode_Statics::NewProp_OnPlayerDied,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGauntletGameMode_Statics::NewProp_OnLevelCompleted,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AGauntletGameMode_Statics::PropPointers) < 2048);
 // ********** End Class AGauntletGameMode Property Definitions *************************************
@@ -437,10 +501,10 @@ AGauntletGameMode::~AGauntletGameMode() {}
 struct Z_CompiledInDeferFile_FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h__Script_TheGauntlet_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AGauntletGameMode, AGauntletGameMode::StaticClass, TEXT("AGauntletGameMode"), &Z_Registration_Info_UClass_AGauntletGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGauntletGameMode), 2460762634U) },
+		{ Z_Construct_UClass_AGauntletGameMode, AGauntletGameMode::StaticClass, TEXT("AGauntletGameMode"), &Z_Registration_Info_UClass_AGauntletGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGauntletGameMode), 3824842091U) },
 	};
 }; // Z_CompiledInDeferFile_FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h__Script_TheGauntlet_Statics 
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h__Script_TheGauntlet_229465313{
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h__Script_TheGauntlet_198318972{
 	TEXT("/Script/TheGauntlet"),
 	Z_CompiledInDeferFile_FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h__Script_TheGauntlet_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_rober_TheGauntlet_TheGauntlet_Source_TheGauntlet_GauntletGameMode_h__Script_TheGauntlet_Statics::ClassInfo),
 	nullptr, 0,

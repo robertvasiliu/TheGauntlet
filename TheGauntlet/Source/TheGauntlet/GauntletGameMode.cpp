@@ -2,55 +2,55 @@
 #include "Kismet/GameplayStatics.h"
 #include "MyGameInstance.h"
 #include "Engine/Engine.h"
+#include "Components/StaticMeshComponent.h"
 
 AGauntletGameMode::AGauntletGameMode()
 {
-    PrimaryActorTick.bCanEverTick = true;
+    
+}
+void AGauntletGameMode::HandlePlayerDeath()
+{
+    if (GEngine)
+        GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Cyan, TEXT("GM: HandlePlayerDeath"));
+
+    OnPlayerDied.Broadcast();
+
+    GetWorldTimerManager().SetTimer(
+        ReturnToMenuTimerHandle,
+        this,
+        &AGauntletGameMode::ReturnToMainMenu,
+        3.0f,
+        false
+    );
 }
 
 void AGauntletGameMode::HandleLevelCompleted(AActor* GoalActor)
 {
+    OnLevelCompleted.Broadcast();
+
+    GetWorldTimerManager().SetTimer(
+        ReturnToMenuTimerHandle,
+        this,
+        &AGauntletGameMode::ReturnToMainMenu,
+        3.0f,
+        false
+    );
+}
+void AGauntletGameMode::ReturnToMainMenu()
+{
+    if (GEngine)
+        GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Green, TEXT("GM: ReturnToMainMenu"));
+
     if (UGameInstance* GI = GetGameInstance())
     {
         if (UMyGameInstance* MyGI = Cast<UMyGameInstance>(GI))
-        {
-            if (GEngine)
-            {
-                GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Green, TEXT("Cast GI OK"));
-            }
-
             MyGI->LoadMainMenu();
-        }
-        else if (GEngine)
-        {
-            GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Red, TEXT("Cast GI FAILED"));
-        }
     }
 }
+
 void AGauntletGameMode::BeginPlay()
 {
     Super::BeginPlay();
-}
-void AGauntletGameMode::Tick(float DeltaSeconds)
-{
-    Super::Tick(DeltaSeconds);
-    APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(this, 0);
-    if (!PlayerPawn) return;
-    const FVector Loc = PlayerPawn->GetActorLocation();
-    if (Loc.Z < -10.f)
-    {
-        HandlePlayerDeath();
-    }
-}
-void AGauntletGameMode::HandlePlayerDeath()
-{
-    if (UGameInstance* GI = GetGameInstance())
-    {
-        if (UMyGameInstance* MyGI = Cast<UMyGameInstance>(GI))
-        {
-            MyGI->LoadMainMenu();
-        }
-    }
 }
 
 void AGauntletGameMode::OpenGateTimed(AActor* GateActor, float OpenTime)
@@ -95,14 +95,48 @@ void AGauntletGameMode::CloseGate(AActor* GateActor)
         Mesh->SetVisibility(true);
     }
 }
-void AGauntletGameMode::RegisterLeverState(AActor* Lever, bool bIsOn)
+
+void AGauntletGameMode::RegisterLeverState()
 {
-    if (!Lever || !PuzzleGate) return;
+    if (!PuzzleGate) return;
+
     bool bAllOn = true;
 
-    for (AActor* L : PuzzleLevers)
+    for (AActor* LeverActor : PuzzleLevers)
     {
-        if (!L) continue;
+        if (!LeverActor) continue;
 
+        if (UFunction* Func = LeverActor->FindFunction(FName("IsLeverOn")))
+        {
+            bool bTemp = false;
+            LeverActor->ProcessEvent(Func, &bTemp);
+            if (!bTemp)
+            {
+                bAllOn = false;
+                break;
+            }
+        }
+    }
+
+    if (bAllOn)
+    {
+        if (GEngine)
+        {
+            GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Green, TEXT("ALL ON -> DESTROY"));
+        }
+
+        if (PuzzleGate)
+        {
+            GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Cyan,
+                *FString::Printf(TEXT("Destroy: %s"), *PuzzleGate->GetName()));
+            PuzzleGate->Destroy();
+        }
+    }
+    else
+    {
+        if (GEngine)
+        {
+            GEngine->AddOnScreenDebugMessage(-1, 1.f, FColor::Red, TEXT("NOT ALL ON"));
+        }
     }
 }

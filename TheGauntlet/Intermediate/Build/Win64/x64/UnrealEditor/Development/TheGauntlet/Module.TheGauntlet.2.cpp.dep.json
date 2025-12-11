@@ -214,13 +214,7 @@
             "c:\\users\\rober\\thegauntlet\\thegauntlet\\intermediate\\build\\win64\\unrealeditor\\inc\\thegauntlet\\uht\\thegauntlet.init.gen.cpp",
             "c:\\users\\rober\\thegauntlet\\thegauntlet\\intermediate\\build\\win64\\unrealeditor\\inc\\thegauntlet\\uht\\thegauntletcharacter.gen.cpp",
             "c:\\users\\rober\\thegauntlet\\thegauntlet\\source\\thegauntlet\\thegauntletcharacter.h",
-            "c:\\users\\rober\\thegauntlet\\thegauntlet\\intermediate\\build\\win64\\unrealeditor\\inc\\thegauntlet\\uht\\thegauntletcharacter.generated.h",
-            "c:\\users\\rober\\thegauntlet\\thegauntlet\\intermediate\\build\\win64\\unrealeditor\\inc\\thegauntlet\\uht\\thegauntletgamemode.gen.cpp",
-            "c:\\users\\rober\\thegauntlet\\thegauntlet\\source\\thegauntlet\\thegauntletgamemode.h",
-            "c:\\users\\rober\\thegauntlet\\thegauntlet\\intermediate\\build\\win64\\unrealeditor\\inc\\thegauntlet\\uht\\thegauntletgamemode.generated.h",
-            "c:\\users\\rober\\thegauntlet\\thegauntlet\\intermediate\\build\\win64\\unrealeditor\\inc\\thegauntlet\\uht\\thegauntletplayercontroller.gen.cpp",
-            "c:\\users\\rober\\thegauntlet\\thegauntlet\\source\\thegauntlet\\thegauntletplayercontroller.h",
-            "c:\\users\\rober\\thegauntlet\\thegauntlet\\intermediate\\build\\win64\\unrealeditor\\inc\\thegauntlet\\uht\\thegauntletplayercontroller.generated.h"
+            "c:\\users\\rober\\thegauntlet\\thegauntlet\\intermediate\\build\\win64\\unrealeditor\\inc\\thegauntlet\\uht\\thegauntletcharacter.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

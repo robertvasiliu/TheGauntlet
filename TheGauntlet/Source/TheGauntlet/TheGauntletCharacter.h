@@ -15,82 +15,106 @@ struct FInputActionValue;
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
 /**
- *  A simple player-controllable third person character
- *  Implements a controllable orbiting camera
+ *  Player character: movimento + attributi (salute, inventario chiavi/pietre)
  */
-UCLASS(abstract)
-class ATheGauntletCharacter : public ACharacter
+
+UCLASS()
+class THEGAUNTLET_API ATheGauntletCharacter : public ACharacter
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
-	/** Camera boom positioning the camera behind the character */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess = "true"))
-	USpringArmComponent* CameraBoom;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+    USpringArmComponent* CameraBoom;
 
-	/** Follow camera */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components", meta = (AllowPrivateAccess = "true"))
-	UCameraComponent* FollowCamera;
-	
-protected:
-
-	/** Jump Input Action */
-	UPROPERTY(EditAnywhere, Category="Input")
-	UInputAction* JumpAction;
-
-	/** Move Input Action */
-	UPROPERTY(EditAnywhere, Category="Input")
-	UInputAction* MoveAction;
-
-	/** Look Input Action */
-	UPROPERTY(EditAnywhere, Category="Input")
-	UInputAction* LookAction;
-
-	/** Mouse Look Input Action */
-	UPROPERTY(EditAnywhere, Category="Input")
-	UInputAction* MouseLookAction;
-
-public:
-
-	/** Constructor */
-	ATheGauntletCharacter();	
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+    UCameraComponent* FollowCamera;
 
 protected:
 
-	/** Initialize input action bindings */
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+    UPROPERTY(EditAnywhere, Category = "Input")
+    UInputAction* JumpAction;
+
+    UPROPERTY(EditAnywhere, Category = "Input")
+    UInputAction* MoveAction;
+
+    UPROPERTY(EditAnywhere, Category = "Input")
+    UInputAction* LookAction;
+
+    UPROPERTY(EditAnywhere, Category = "Input")
+    UInputAction* MouseLookAction;
+
+    UPROPERTY(EditAnywhere, Category = "Input")
+    UInputAction* InteractAction;
+    virtual void Tick(float DeltaSeconds) override;
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Stats")
+    float MaxHealth = 100.f;
+
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Stats")
+    float Health = 100.f;
+
+    UPROPERTY(EditDefaultsOnly, Category="Health")
+    float FallDamagePerSecond = 20.f;
+
+    UPROPERTY(EditDefaultsOnly, Category="Health")
+    float KillZ = -10.f;
+
+    bool bIsTakingFallDamage = false;
+
+    FTimerHandle FallDamageTimerHandle;
+
+    UFUNCTION()
+    void ApplyFallDamage();
+
+public:
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
+    bool bHasKey = false;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Inventory")
+    int32 Stones = 0;
+
+public:
+
+    ATheGauntletCharacter();
 
 protected:
 
-	/** Called for movement input */
-	void Move(const FInputActionValue& Value);
+    virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	/** Called for looking input */
-	void Look(const FInputActionValue& Value);
+    void Move(const FInputActionValue& Value);
 
-public:
+    void Look(const FInputActionValue& Value);
 
-	/** Handles move inputs from either controls or UI interfaces */
-	UFUNCTION(BlueprintCallable, Category="Input")
-	virtual void DoMove(float Right, float Forward);
-
-	/** Handles look inputs from either controls or UI interfaces */
-	UFUNCTION(BlueprintCallable, Category="Input")
-	virtual void DoLook(float Yaw, float Pitch);
-
-	/** Handles jump pressed inputs from either controls or UI interfaces */
-	UFUNCTION(BlueprintCallable, Category="Input")
-	virtual void DoJumpStart();
-
-	/** Handles jump pressed inputs from either controls or UI interfaces */
-	UFUNCTION(BlueprintCallable, Category="Input")
-	virtual void DoJumpEnd();
+    void Interact(const FInputActionValue& Value);
 
 public:
 
-	/** Returns CameraBoom subobject **/
-	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+    UFUNCTION(BlueprintCallable, Category = "Input")
+    virtual void DoMove(float Right, float Forward);
 
-	/** Returns FollowCamera subobject **/
-	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+    UFUNCTION(BlueprintCallable, Category = "Input")
+    virtual void DoLook(float Yaw, float Pitch);
+
+    UFUNCTION(BlueprintCallable, Category = "Input")
+    virtual void DoJumpStart();
+
+    UFUNCTION(BlueprintCallable, Category = "Input")
+    virtual void DoJumpEnd();
+
+
+    UFUNCTION(BlueprintCallable, Category = "Stats")
+    void ApplyDamage(float Amount);
+
+    UFUNCTION(BlueprintCallable, Category = "Inventory")
+    void AddStones(int32 Amount);
+
+    UFUNCTION(BlueprintCallable, Category = "Inventory")
+    void SetHasKey(bool bNewHasKey);
+
+public:
+
+    FORCEINLINE USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+
+    FORCEINLINE UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 };
-

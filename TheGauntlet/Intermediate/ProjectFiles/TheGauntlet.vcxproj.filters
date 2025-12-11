@@ -38,10 +38,7 @@
     <ClInclude Include="..\..\Source\TheGauntlet\GauntletGameMode.h">
       <Filter>Source\TheGauntlet</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\TheGauntlet\Interactables.cpp">
-      <Filter>Source\TheGauntlet</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TheGauntlet\Interactables.h">
+    <ClInclude Include="..\..\Source\TheGauntlet\GauntletInteractable.h">
       <Filter>Source\TheGauntlet</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\TheGauntlet\MyClass.cpp">
@@ -69,12 +66,6 @@
       <Filter>Source\TheGauntlet</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TheGauntlet\TheGauntletCharacter.h">
-      <Filter>Source\TheGauntlet</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\TheGauntlet\TheGauntletGameMode.cpp">
-      <Filter>Source\TheGauntlet</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\TheGauntlet\TheGauntletGameMode.h">
       <Filter>Source\TheGauntlet</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\TheGauntlet\TheGauntletPlayerController.cpp">
